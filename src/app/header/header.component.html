@@ -6,10 +6,10 @@
 
     <div class="navbar-default">
       <ul class="nav navbar-nav">
-        <li><a href="#">Recipes</a></li>
-        <li><a href="#">Shopping</a></li>
+        <li (click)="onSelect('recipes')"><a href="#">Recipes</a></li>
+        <li (click)="onSelect('shopping')"><a href="#">Shopping</a></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right" appDropdown>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" role="button">Manage Data <span class="caret"></span></a>
           <ul class="dropdown-menu">

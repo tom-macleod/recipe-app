@@ -14,4 +14,9 @@ export class ShoppingList {
         new Ingredient('Neeps', 2),
         new Ingredient('Tatties', 5)
     ];
+
+    addIngredient(ingredient: Ingredient) {
+        this.ingredients.push(ingredient);
+    }
+
 }
