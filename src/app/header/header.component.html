@@ -1,20 +1,22 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a href="#" class="navbar-brand">Recipe Book</a>
+      <a [routerLink]="['/recipes']" class="navbar-brand">Recipe Book</a>
     </div>
 
     <div class="navbar-default">
       <ul class="nav navbar-nav">
-        <li (click)="onSelect('recipes')"><a href="#">Recipes</a></li>
-        <li (click)="onSelect('shopping')"><a href="#">Shopping</a></li>
+        <li [routerLink]="['/recipes']" routerLinkActive="active">
+              <a>Recipes</a>
+        </li>
+        <li [routerLink]="['/shopping']" routerLinkActive="active"><a>Shopping</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right" appDropdown>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" role="button">Manage Data <span class="caret"></span></a>
+        <li class="dropdown" appDropdown>
+          <a class="dropdown-toggle" role="button">Manage Data <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Save Data</a></li>
-            <li><a href="#">Fetch Data</a></li>
+            <li><a>Save Data</a></li>
+            <li><a>Fetch Data</a></li>
           </ul>
         </li>
       </ul>
